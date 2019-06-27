@@ -10,15 +10,19 @@ import SwiftUI
 import LottieSwiftUI
 
 struct ContentView : View {
+    var name: String = "LottieLogo1"
     var body: some View {
-        Text("Hello World")
+        LottieAnimationView(name: name)
     }
 }
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        LottieSwiftUI()
+        Group {
+            ContentView(name: "LottieLogo2")
+            ContentView(name: "LottieLogo1")
+        }.previewDevice("iPhone Xʀ")
     }
 }
 #endif

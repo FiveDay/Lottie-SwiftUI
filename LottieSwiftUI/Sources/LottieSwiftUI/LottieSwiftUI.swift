@@ -1,16 +1,22 @@
 import SwiftUI
 
-
-public struct LottieSwiftUI : UIViewRepresentable {
+public struct LottieSwiftUI {
     var text = "Hello, World!"
-    public init() {}
-    public func makeUIView(context: Context) -> AnimationView {
-        AnimationView(name: "home")
+}
+
+public struct LottieAnimationView : UIViewRepresentable {
+    
+    let name: String
+    
+    public init(name: String) {
+        self.name = name
+    }
+
+    public func makeUIView(context: UIViewRepresentableContext<LottieAnimationView>) -> AnimationView {
+        AnimationView(name: self.name)
     }
     
-    public func updateUIView(_ uiView: AnimationView, context: UIViewRepresentableContext<LottieSwiftUI>) {
+    public func updateUIView(_ uiView: AnimationView, context: UIViewRepresentableContext<LottieAnimationView>) {
         uiView.play()
     }
-//    public var body: some View {
-//    }
 }

@@ -12,7 +12,7 @@ import LottieSwiftUI
 struct ContentView : View {
     var name: String = "LottieLogo1"
     var body: some View {
-        LottieAnimationView(name: name)
+        LottieAnimationView(name: name).play()
     }
 }
 

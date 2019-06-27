@@ -16,7 +16,7 @@ import CoreGraphics
  
  Value Providers can be used to dynamically set animation properties at run time.
  */
-protocol AnyValueProvider {
+public protocol AnyValueProvider {
   
   /// The Type of the value provider
   var valueType: Any.Type { get }

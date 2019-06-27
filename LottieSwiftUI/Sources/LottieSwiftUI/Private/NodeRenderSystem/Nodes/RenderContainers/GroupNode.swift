@@ -90,7 +90,7 @@ class GroupNode: AnimatorNode {
     self.childKeypaths = childKeypaths
     
     for childContainer in tree.renderContainers {
-//      container.insertRenderLayer(childContainer)
+      container.insertRenderLayer(childContainer)
     }
   }
   

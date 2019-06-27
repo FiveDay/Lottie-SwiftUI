@@ -148,15 +148,15 @@ extension BezierPath: Interpolatable {
   }
 }
 
-//extension TextDocument: Interpolatable {
-//  
-//  func interpolateTo(_ to: TextDocument, amount: CGFloat, spatialOutTangent: CGPoint?, spatialInTangent: CGPoint?) -> TextDocument {
-//    if amount == 1 {
-//      return to
-//    }
-//    return self
-//  }
-//}
+extension TextDocument: Interpolatable {
+  
+  func interpolateTo(_ to: TextDocument, amount: CGFloat, spatialOutTangent: CGPoint?, spatialInTangent: CGPoint?) -> TextDocument {
+    if amount == 1 {
+      return to
+    }
+    return self
+  }
+}
 
 extension Array: Interpolatable where Element == Double {
   func interpolateTo(_ to: Array<Element>, amount: CGFloat, spatialOutTangent: CGPoint?, spatialInTangent: CGPoint?) -> Array<Element> {

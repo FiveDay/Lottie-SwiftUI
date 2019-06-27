@@ -33,6 +33,7 @@
 		4521AC2922C4641700F92A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4521AC3322C464DF00F92A30 /* LottieSwiftUI */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LottieSwiftUI; path = ../LottieSwiftUI; sourceTree = "<group>"; };
 		4521AC3722C468BE00F92A30 /* LottieSwiftUI_wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieSwiftUI_wrapper.swift; sourceTree = "<group>"; };
+		4521AC3D22C4C86500F92A30 /* home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 		4521AC1B22C4641700F92A30 /* LottieSwiftUI.wrapper */ = {
 			isa = PBXGroup;
 			children = (
+				4521AC3D22C4C86500F92A30 /* home.json */,
 				4521AC3722C468BE00F92A30 /* LottieSwiftUI_wrapper.swift */,
 				4521AC1C22C4641700F92A30 /* LottieSwiftUI_wrapper.h */,
 				4521AC1D22C4641700F92A30 /* Info.plist */,

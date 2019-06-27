@@ -1,20 +1,20 @@
 //
 //  PathNode.swift
-//  
+//  lottie-swift
 //
-//  Created by zhangyu528 on 2019/6/23.
+//  Created by Brandon Withrow on 1/17/19.
 //
 
 import Foundation
 
 protocol PathNode {
-    var pathOutput: PathOutputNode { get }
+  var pathOutput: PathOutputNode { get }
 }
 
 extension PathNode where Self: AnimatorNode {
-    
-    var outputNode: NodeOutput {
-        return pathOutput
-    }
-    
+  
+  var outputNode: NodeOutput {
+    return pathOutput
+  }
+  
 }

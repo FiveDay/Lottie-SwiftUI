@@ -1,16 +1,60 @@
 //
 //  LottieView.swift
-//  
+//  lottie-swift-iOS
 //
-//  Created by zhangyu528 on 2019/6/23.
+//  Created by Brandon Withrow on 2/6/19.
 //
 
 import Foundation
 import UIKit
 
-public class LottieView: UIView {
+//public typealias LottieView = UIView
+
+open class LottieView: UIView {
+
+  var viewLayer: CALayer? {
+    return layer
+  }
+
+  func layoutAnimation() {
+
+  }
+  
+  func animationMovedToWindow() {
     
-    var viewLayer: CALayer {
-        return layer
+  }
+  
+  open override func didMoveToWindow() {
+    super.didMoveToWindow()
+    animationMovedToWindow()
+  }
+  
+  var screenScale: CGFloat {
+    return UIScreen.main.scale
+  }
+
+  func commonInit() {
+    contentMode = .scaleAspectFit
+    clipsToBounds = true
+    NotificationCenter.default.addObserver(self, selector: #selector(animationWillEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(animationWillMoveToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+  }
+
+  open override var contentMode: UIView.ContentMode {
+    didSet {
+      setNeedsLayout()
     }
+  }
+
+  open override func layoutSubviews() {
+    super.layoutSubviews()
+    self.layoutAnimation()
+  }
+  
+  @objc func animationWillMoveToBackground() {
+  }
+  
+  @objc func animationWillEnterForeground() {
+  }
+  
 }

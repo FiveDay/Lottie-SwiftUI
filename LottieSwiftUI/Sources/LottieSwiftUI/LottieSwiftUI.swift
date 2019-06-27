@@ -9,7 +9,7 @@ public struct LottieSwiftUI : UIViewRepresentable {
     }
     
     public func updateUIView(_ uiView: AnimationView, context: UIViewRepresentableContext<LottieSwiftUI>) {
-        
+        uiView.play()
     }
 //    public var body: some View {
 //    }

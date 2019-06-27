@@ -9,26 +9,26 @@ import Foundation
 import CoreGraphics
 
 /// A `ValueProvider` that returns a CGColor Value
-final class ColorValueProvider: AnyValueProvider {
+public final class ColorValueProvider: AnyValueProvider {
   
   /// Returns a Color for a CGColor(Frame Time)
-  typealias ColorValueBlock = (CGFloat) -> Color
+  public typealias ColorValueBlock = (CGFloat) -> Color
   
   /// The color value of the provider.
-  var color: Color {
+  public var color: Color {
     didSet {
       hasUpdate = true
     }
   }
   
   /// Initializes with a block provider
-  init(block: @escaping ColorValueBlock) {
+  public init(block: @escaping ColorValueBlock) {
     self.block = block
     self.color = Color(r: 0, g: 0, b: 0, a: 1)
   }
   
   /// Initializes with a single color.
-  init(_ color: Color) {
+  public init(_ color: Color) {
     self.color = color
     self.block = nil
     hasUpdate = true
@@ -36,18 +36,18 @@ final class ColorValueProvider: AnyValueProvider {
   
   // MARK: ValueProvider Protocol
   
-  var valueType: Any.Type {
+  public var valueType: Any.Type {
     return Color.self
   }
   
-  func hasUpdate(frame: CGFloat) -> Bool {
+  public func hasUpdate(frame: CGFloat) -> Bool {
     if block != nil {
       return true
     }
     return hasUpdate
   }
   
-  func value(frame: CGFloat) -> Any {
+  public func value(frame: CGFloat) -> Any {
     hasUpdate = false
     let newColor: Color
     if let block = block {

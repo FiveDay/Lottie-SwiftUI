@@ -1,16 +1,15 @@
 //
 //  AnimationTime.swift
-//  Hupo
+//  lottie-swift-iOS
 //
-//  Created by zhangyu528 on 2019/6/20.
-//  Copyright © 2019 zhangyu528. All rights reserved.
+//  Created by Brandon Withrow on 2/6/19.
 //
 
 import Foundation
 import CoreGraphics
 
 /// Defines animation time in Frames (Seconds * Framerate).
-typealias AnimationFrameTime = CGFloat
+public typealias AnimationFrameTime = CGFloat
 
 /// Defines animation time by a progress from 0 (beginning of the animation) to 1 (end of the animation)
-typealias AnimationProgresstime  = CGFloat
+public typealias AnimationProgressTime = CGFloat

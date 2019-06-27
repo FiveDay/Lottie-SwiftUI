@@ -142,7 +142,7 @@ extension Vector3D: Codable {
   
 }
 
-extension Vector3D {
+public extension Vector3D {
   var pointValue: CGPoint {
     return CGPoint(x: x, y: y)
   }

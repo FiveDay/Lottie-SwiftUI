@@ -5,7 +5,7 @@
 * iOS13.0 or later
 
 ## Install
-### Carthage
+### Swift Packages
 
 1. In Xcode, open your project and navigate to File > Swift Packages > Add Package Dependency...
 2. Paste the repository URL and follow the prompts to add the library to your project.

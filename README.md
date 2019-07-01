@@ -7,12 +7,8 @@
 ## Install
 ### Carthage
 
-Add Lottie to your Cartfile:
-
-github "FiveDay/Lottie-Swift" "master"
-And then run:
-
-carthage update
+1. In Xcode, open your project and navigate to File > Swift Packages > Add Package Dependency...
+2. Paste the repository URL and follow the prompts to add the library to your project.
 
 ## Quick Start
 
